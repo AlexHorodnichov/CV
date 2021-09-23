@@ -18,6 +18,19 @@ body {
   margin: 0 auto;
   box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
 }
+#svg-sprite {
+  display: none;
+}
+.icon {
+  padding-right: 5px;
+}
+.iconcont:hover > .aside-text {
+  color: #ff6b08;
+}
+.iconcont {
+  display: flex;
+  align-items: center;
+}
 .side {
   width: 52%;
   background-color: #1e2939;
