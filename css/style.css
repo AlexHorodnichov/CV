@@ -186,7 +186,7 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-@media screen and (min-width: 321px) {
+@media screen and (min-width: 481px) {
   .main-container {
     max-width: 1200px;
     padding: 20px;
