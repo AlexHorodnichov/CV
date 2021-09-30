@@ -1,3 +1,7 @@
+:root {
+  --accent-color: #ff6b08;
+  --main-text-color: #595959;
+}
 * {
   padding: 0;
   margin: 0;
@@ -6,15 +10,11 @@
 body {
   font-family: "Montserrat", sans-serif;
   background: #f5f7fa;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
 .main-container {
   background: #ffffff;
   display: flex;
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
 }
@@ -25,21 +25,23 @@ body {
   padding-right: 5px;
 }
 .iconcont:hover > .aside-text {
-  color: #ff6b08;
+  color: var(--accent-color);
 }
 .iconcont {
   display: flex;
   align-items: center;
 }
 .side {
-  width: 52%;
+  width: 100%;
   background-color: #1e2939;
   padding-top: 40px;
   padding-bottom: 40px;
   box-sizing: border-box;
 }
 .container {
-  padding: 40px 50px 50px 40px;
+  display: none;
+  width: 100%;
+  padding: 20px;
 }
 .photo {
   width: auto;
@@ -56,7 +58,7 @@ body {
 .aside-title,
 .section-title {
   color: #ffffff;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.09em;
   margin-bottom: 20px;
@@ -73,13 +75,15 @@ body {
 }
 .sert {
   margin-left: 20px;
+  width: 20px;
 }
 .sert:hover {
-  transform: scale(20);
+  margin: 0 auto;
+  width: 200px;
+  height: 250px;
 }
-
 .aside-item {
-  color: #ff6b08;
+  color: var(--accent-color);
   margin-left: 15px;
 }
 .aside-text {
@@ -88,12 +92,11 @@ body {
   line-height: 1.71em;
   color: #878d95;
 }
-
 .name {
-  font-size: 33px;
+  font-size: 26px;
   font-weight: 700;
-  line-height: 1.97em;
-  color: #ff6b08;
+  line-height: 1em;
+  color: var(--accent-color);
   margin-bottom: 30px;
 }
 .section-conteiner {
@@ -103,22 +106,20 @@ body {
   color: #000000;
   margin-top: 30px;
 }
-
 .project-link {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 24px;
-  color: #595959;
+  line-height: 1.1em;
+  color: var(--main-text-color);
 }
 .title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 1.2em;
   margin-top: 10px;
-  margin-bottom: 15px;
 }
 .company {
-  color: #ff6b08;
+  color: var(--accent-color);
 }
 .period {
   color: #a8a8a8;
@@ -127,9 +128,114 @@ body {
   line-height: 24px;
 }
 .text-item {
-  color: #595959;
-  font-size: 14px;
+  color: var(--main-text-color);
+  font-size: 12px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.51;
   margin-left: 16px;
+}
+.switch {
+  position: fixed;
+  display: block;
+  width: 54px;
+  height: 26px;
+  top: 5px;
+  left: 5px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--accent-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3px;
+  background-color: #ffffff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: var(--main-text-color);
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--main-text-color);
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+@media screen and (min-width: 321px) {
+  .main-container {
+    max-width: 1200px;
+    padding: 20px;
+  }
+  .side {
+    width: 52%;
+  }
+  .container {
+    display: block;
+    padding: 40px 50px 50px 40px;
+  }
+  .switch {
+    display: none;
+  }
+  .sert:hover {
+    -webkit-transform-origin-y: 50%;
+    transform: scale(2);
+  }
+}
+@media screen and (min-width: 769px) {
+  .side {
+    width: 450px;
+  }
+  .name {
+    font-size: 33px;
+    line-height: 1.97em;
+  }
+  .aside-title,
+  .section-title {
+    font-size: 22px;
+  }
+  .project-link {
+    font-size: 14px;
+    line-height: 1.71em;
+  }
+  .aside-text {
+    font-size: 16px;
+  }
+  .title {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+  .text-item {
+    font-size: 14px;
+    line-height: 1.71;
+    margin-bottom: 20px;
+  }
+  .sert:hover {
+    transform: scale(4);
+    -webkit-transform-origin-y: 100%;
+  }
 }
