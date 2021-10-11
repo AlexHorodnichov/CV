@@ -1,0 +1,17 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #f5f7fa;
+}
+.main-container {
+  background: #ffffff;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 481px) {
+  .main-container {
+    max-width: 1200px;
+    padding: 20px;
+  }
+}

@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV Ivan Buzduha</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/main.min.css" />
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 
@@ -131,28 +131,27 @@
       <section class="section-conteiner">
         <h3 class="section-title">Projects</h3>
         <ul class="marker">
-          <li>
+          <li class="project-item">
             <h4 class="title">Kapusta smart finance, <span class="company">JS, React, Node </span> </h4>
-            <a class="project-link" href="https://kozubskyi-goit-kapusta.netlify.app">Front-End</a>
-            <a class="project-link" href="https://fierce-falls-92546.herokuapp.com/api-docs/"> & Back-End</a>
-            <p class="text-item">This application helps the user to keep track of financial expenses and income. For
+            <a class="project-link" href="https://kozubskyi-goit-kapusta.netlify.app"><img class="project-img" src="img/kapusta.jpg"/></a>
+            <!-- <a class="project-link" href="https://fierce-falls-92546.herokuapp.com/api-docs/"> & Back-End</a> -->
+            <p class="text-item"> This application helps the user to keep track of financial expenses and income. For
               convenience, it is divided into categories, if necessary, a summary is available in detail and in the form
-              of graphs.
-              I have made the Balance section</p>
+              of graphs. <br> I have made the Balance section. <a class="project-link" href="https://fierce-falls-92546.herokuapp.com/api-docs/">Back-End</a></p>
           </li>
-          <li>
+          <li class="project-item">
             <h4 class="title">Hydeem-reactivno, <span class="company">JS, React </span> </h4>
             <a class="project-link"
-              href="https://hydeem-reactivno.netlify.app/">https://hydeem-reactivno.netlify.app/</a>
+              href="https://hydeem-reactivno.netlify.app/"><img class="project-img" src="img/slimom.jpg"/></a>
             <p class="text-item">Project idea - implementation of a convenient and easy-to-use application for women.
-              Helps to control and track consumed foods.I made authorization</p>
+              Helps to control and track consumed foods. <br>I made authorization</p>
           </li>
-          <li>
+          <li class="project-item">
             <h4 class="title">Weather, <span class="company">JS</span> </h4>
             <a class="project-link"
-              href="https://georgiyt.github.io/goit-js-project-forca/">https://georgiyt.github.io/goit-js-project-forca/</a>
+              href="https://georgiyt.github.io/goit-js-project-forca/"><img class="project-img" src="img/weather.jpg"/></a>
             <p class="text-item">The idea of the project is to track the weather with a convenient and pleasant
-              interface. I made section where tracked weather to 5 days with different parameters</p>
+              interface. <br>I made section where tracked weather to 5 days with different parameters</p>
           </li>
         </ul>
       </section>
@@ -207,8 +206,9 @@
       <!--Education-->
       <section class="section-conteiner">
         <h3 class="section-title">Education</h3>
-        <h4 class="title">Zaporizhzhya State Engineering Academy <span class="company">Software engineer </span> </h4>
+        <h4 class="title">Zaporizhzhya State Engineering Academy <span class="company">Software Sytems </span> </h4>
         <span class="period">Septermber 2007 - June 2014 <span class="Divider">|</span> Ukraine</span>
+        <!-- <img class="sert" src="img/sert4.jpg" height="30" /> -->
       </section>
       <section class="section-conteiner">
         <h3 class="section-title">ADDITIONAL EDUCATION</h3>
@@ -229,7 +229,8 @@
       </section>
     </section>
   </main>
-    <script type="text/javascript">   
+    <script type="text/javascript">  
+    window.onresize = function(){ location.reload(); } 
     let container = document.querySelector(".container");
     let side = document.querySelector(".side");   
     let checkbox = document.querySelector('.checkbox').addEventListener('change', function () {      
