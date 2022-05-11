@@ -43,7 +43,7 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 1.51;
-  margin-left: 16px;
+  // margin-left: 16px;
 }
 .sert {
   margin-left: 20px;
@@ -57,6 +57,7 @@
 }
 .project-item {
   box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
+  padding: 10px;margin-top: 10px;
 }
 @media screen and (min-width: 481px) {
   .container {
